@@ -1,0 +1,36 @@
+<div>
+    <!--   Сторінка Home-->
+    <div ng-show="home" ng-cloak>
+        <main-block></main-block>
+        <div class="chat">
+        <chat-block></chat-block>
+        </div>
+    </div>
+    
+    <!--    Сторінка Blog-->
+    <div ng-show="blog" ng-cloak>
+        <h1>Blog</h1>
+        <input type="text" ng-model="searchBlock"><br><br>
+        <div ng-repeat="a in arr | filter:searchBlock" class="newsBlock">
+            <h2>{{a.title}}</h2>
+            <br>
+            <h3>{{a.text}}</h3>
+        </div>
+    </div>
+    
+    <!--    Сторінка Contact-->
+    <div ng-show="contact" ng-cloak>
+        <h1>Contact</h1>
+    </div>
+    
+    <!--    Сторінка Items-->
+    <div ng-show="items" ng-cloak>
+        <h1>Items</h1>
+        <items-block></items-block>
+    </div>
+    
+    <!--    Сторінка юзера-->
+    <div ng-show="userStatus" ng-cloak>
+      <profile-block></profile-block>
+    </div>
+</div>
